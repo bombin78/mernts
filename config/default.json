@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "jwtSecret": "ochen secretny kluch",
+    "mongoUri": "mongodb+srv://bombin:sEr2s23m@cluster0.icjqu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
+}
