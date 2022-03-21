@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import {NavLink, useNavigate} from 'react-router-dom';
 import {AuthContext} from '../context/AuthContext';
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
     const navigate = useNavigate();
     const auth = useContext(AuthContext);
 
-    const logoutHandler = (event) => {
+    const logoutHandler = (event: React.MouseEvent<HTMLAnchorElement>) => {
         event.preventDefault();
         auth.logout();
         navigate('./', { replace: true });

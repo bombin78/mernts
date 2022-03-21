@@ -3,7 +3,7 @@ import {useHttp} from '../hooks/http.hook';
 import {AuthContext} from '../context/AuthContext';
 import {useNavigate} from 'react-router-dom';
 
-export const CreatePage = () => {
+export const CreatePage: React.FC = () => {
     const navigate = useNavigate();
     const auth = useContext(AuthContext);
     const {request} = useHttp();
@@ -13,7 +13,7 @@ export const CreatePage = () => {
         window.M.updateTextFields();
     }, []);
 
-    const pressHandler = async (event) => {
+    const pressHandler = async (event: React.KeyboardEvent<HTMLInputElement>) => {
         if(event.key === 'Enter') {
             try {
                 const data = await request('/api/link/generate', 'POST', {from: link}, {

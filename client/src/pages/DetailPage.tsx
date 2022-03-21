@@ -5,7 +5,7 @@ import {AuthContext} from '../context/AuthContext';
 import {Loader} from '../components/Loader';
 import {LinkCard} from '../components/LinkCard';
 
-export const DetailPage = () => {
+export const DetailPage: React.FC = () => {
     const {token} = useContext(AuthContext);
     const {request, loading} = useHttp();
     const [link, setLink] = useState(null);

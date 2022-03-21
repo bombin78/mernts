@@ -23,7 +23,8 @@ export const useHttp = () => {
             setLoading(false);
 
             return data;
-        } catch(e) {
+        } catch(e:any) {
+            // TODO e:any - установить более корректный тип
             setLoading(false);
             setError(e.message);
             throw e;
