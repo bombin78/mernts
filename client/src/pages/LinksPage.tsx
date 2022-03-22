@@ -3,7 +3,7 @@ import {useHttp} from '../hooks/http.hook';
 import {AuthContext} from '../context/AuthContext';
 import {Loader} from '../components/Loader';
 import {LinksList} from '../components/LinksList';
-import { ILink } from '../interfaces';
+import {ILink} from '../interfaces';
 
 export const LinksPage: React.FC = () => {
     const [links, setLinks] = useState<ILink[]>([]);

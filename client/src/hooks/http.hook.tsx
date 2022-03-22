@@ -1,9 +1,11 @@
 import {useState, useCallback} from 'react';
+//import {IHttpRequestBody} from '../interfaces';
 
 export const useHttp = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    //const request = useCallback(async (url: string, method: string = 'GET', body: IHttpRequestBody | string | null = null, headers: any = {}):Promise<any> => {
     const request = useCallback(async (url, method = 'GET', body = null, headers = {}) => {
         setLoading(true);
 
